@@ -2,6 +2,8 @@
 
 AI-powered Adaptive Card generation, preview, and validation inside VS Code.
 
+> **Blog:** [I Built an MCP Server That Makes AI 10x Better at Adaptive Cards](https://singhvikrant.substack.com/p/i-built-an-mcp-server-that-makes)
+>
 > Part of the [Adaptive Cards MCP](https://github.com/VikrantSingh01/adaptive-cards-mcp) ecosystem.
 > Also available as an [MCP server](https://github.com/VikrantSingh01/adaptive-cards-mcp/tree/main/packages/core) and [browser extension](https://github.com/VikrantSingh01/adaptive-cards-ai-designer).
 
