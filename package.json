@@ -13,8 +13,9 @@
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other",
-    "Snippets"
+    "Programming Languages",
+    "Snippets",
+    "Visualization"
   ],
   "keywords": [
     "adaptive-cards",

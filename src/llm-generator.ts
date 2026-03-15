@@ -90,19 +90,24 @@ async function generateWithCopilot(
       vscode.LanguageModelChatMessage.User(userMessage),
     ];
 
-    const response = await models[0].sendRequest(
-      messages,
-      {},
-      new vscode.CancellationTokenSource().token
-    );
+    const cts = new vscode.CancellationTokenSource();
+    try {
+      const response = await models[0].sendRequest(
+        messages,
+        {},
+        cts.token
+      );
 
-    let fullText = "";
-    for await (const chunk of response.text) {
-      fullText += chunk;
+      let fullText = "";
+      for await (const chunk of response.text) {
+        fullText += chunk;
+      }
+
+      const card = extractCardJson(fullText);
+      return card ? { card, provider: "Copilot" } : null;
+    } finally {
+      cts.dispose();
     }
-
-    const card = extractCardJson(fullText);
-    return card ? { card, provider: "Copilot" } : null;
   } catch (e) {
     console.error("Copilot error:", e);
     return null;

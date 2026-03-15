@@ -173,6 +173,7 @@ export class CardDesignerPanel {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://unpkg.com; style-src 'unsafe-inline'; img-src https: data:;">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adaptive Card Designer</title>
 <script src="https://unpkg.com/adaptivecards@3.0.4/dist/adaptivecards.min.js"></script>
